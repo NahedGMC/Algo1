@@ -1,0 +1,35 @@
+ALGORITHM read_a_sentence
+VAR
+NumberWords:INTEGER:=1;
+sentence:STRING;
+NumberVowels:INTEGER:=0;
+NumberChar:INTEGER
+BEGIN
+
+//read the sentence
+
+   REPEAT
+    read (sentence)
+   UNTIL (sentence[sentence.length-1]=".")
+
+//Determine the number of words in the sentence
+FOR i FROM 0 TO sentence.length-1 DO
+IF (sentence[i]=" ") THEN
+   number:=number 1;
+END_IF
+END_FOR
+
+//Determine number of vowels in the sentence
+FOR i FROM 0 TO sentence.length-1  DO
+IF (sentence[i]={'a','i','o','e','u'}) THEN
+    NumberVowels:=NumberVowels+1;
+END_IF
+END_FOR
+
+// Determine number of characters in the sentence
+   NumberChar :=sentence.length;
+
+Write (sentence)
+Write ( NumberWords)  
+write ( NumberVowels)
+write ( NumberChar)
